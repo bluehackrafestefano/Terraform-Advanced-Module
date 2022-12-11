@@ -7,7 +7,7 @@ output "instance_public_ip" {
 }
 
 output "sec_gr_id" {
-  value = aws_security_group.tf-sec-gr.id
+  value = aws_security_group.tf_sec_gr.id
 }
 
 output "instance_id" {

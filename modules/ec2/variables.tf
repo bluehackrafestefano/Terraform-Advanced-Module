@@ -19,12 +19,12 @@ variable "tags" {
   description = "A tag to incicate instance os"
 }
 
-variable "server-name" {
+variable "server_name" {
   type    = string
   default = "ubuntu"
 }
 
-variable "instance-ports" {
+variable "instance_ports" {
   type        = list(number)
   description = "ubuntu-instance-sec-gr-inbound-rules"
   default     = []

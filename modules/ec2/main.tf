@@ -23,7 +23,7 @@ data "aws_ami" "ubuntu" {
 data "template_file" "userdata" {
   template = file("${abspath(path.module)}/userdata.sh")
   vars = {
-    server-name = var.server-name
+    server-name = var.server_name
   }
 }
 
@@ -32,21 +32,21 @@ resource "aws_instance" "tfmyec2" {
   instance_type          = lookup(var.instance_type, terraform.workspace)
   count                  = terraform.workspace == "prod" ? 3 : 1
   key_name               = var.key_name
-  vpc_security_group_ids = [aws_security_group.tf-sec-gr.id]
+  vpc_security_group_ids = [aws_security_group.tf_sec_gr.id]
   user_data              = data.template_file.userdata.rendered
   tags = {
     Name = var.tags
   }
 }
 
-resource "aws_security_group" "tf-sec-gr" {
+resource "aws_security_group" "tf_sec_gr" {
   name = "terraform-sec-grp"
   tags = {
     Name = var.tags
   }
   # A loop to iterate on port list
   dynamic "ingress" {
-    for_each = var.instance-ports
+    for_each = var.instance_ports
     iterator = port
     content {
       from_port   = port.value
