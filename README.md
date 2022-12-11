@@ -2,9 +2,9 @@
 
 You have just been hired as the new DevOps Engineer at ACME inc. They have been working with Ansible and Cloudformaon for the last couple of years and via word of mouth, Terraform has sparked their interest but they’re not completely sure if Terraform is the way to go. You are a fan of Terraform and are trying to convince them of taking this route.
 
-## Explain how Terraform works and how it compares to Cloudformation + Ansible (basics, pialls, pros and cons)
+1. **Explain how Terraform works and how it compares to Cloudformation + Ansible (basics, pialls, pros and cons)**
 
-### Explain how Terraform works
+## How Terraform works
 - Needs:
   - terraform Terraform ~> 1.3
   - terraform-docs
@@ -90,7 +90,7 @@ go test -v -run TestTerraformEC2 -timeout 10m
 ```
 - Optionally, change workspace to `prod` by activating related lines on the test and see the result.
 
-### Compare to Cloudformation + Ansible (basics, pialls, pros and cons)
+## Compare to Cloudformation + Ansible (basics, pialls, pros and cons)
 - Basically Cloudformation and Terraform have similar solutions.
 - If change to other cloud provider it is a must to use terraform.
 - Terraform can do some configuration operations like local/remote exec and files.
@@ -98,15 +98,19 @@ go test -v -run TestTerraformEC2 -timeout 10m
 - Terraform runs on a HCL and quite flexible to create loops and conditionals.
 
 
-## Explain in general terms what it would take to move from their current setup to a full blown Terraform implementaon
+2. **Explain in general terms what it would take to move from their current setup to a full blown Terraform implementation**
+
 - We will create modules for every service the company is using on cloud. And infrastructure files to spin up the services. 
 - We will write Terratest for each infrastructure.
 - It will take time, but we can start small
 
 
-## Describe how you would approach the implementation of this project in their environment (best practices)
+3. **Describe how you would approach the implementation of this project in their environment (best practices)**
+
 - Team will create a naming convention, and tagging strategy.
+
 - We will decide the repo to keep tf modules.
+
 - Best practices implemented on this task:
   - Use decoupled modules
   - Follow a standard module structure
@@ -125,4 +129,3 @@ go test -v -run TestTerraformEC2 -timeout 10m
   - Testing (terratest)
   - Optimize test runtime (run tests in parallel)
   - Start small
-
