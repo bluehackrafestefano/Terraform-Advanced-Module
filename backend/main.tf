@@ -1,4 +1,4 @@
-module "s3-backend" {
+module "s3_backend" {
   source  = "bluehackrafestefano/s3-backend/aws"
   version = "1.0.0"
 }
