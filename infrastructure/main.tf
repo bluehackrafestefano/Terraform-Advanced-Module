@@ -1,6 +1,6 @@
 module "ec2" {
   source         = "bluehackrafestefano/ec2/aws"
-  version        = "3.2.0"
+  version        = "4.0.0"
   key_name       = "task"
-  instance-ports = var.instance_ports
+  instance_ports = var.instance_ports
 }
