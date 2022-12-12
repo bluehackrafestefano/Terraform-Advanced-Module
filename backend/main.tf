@@ -1,6 +1,6 @@
 module "s3_backend" {
   source  = "bluehackrafestefano/s3-backend/aws"
-  version = "2.0.0"
+  version = "2.0.1"
 }
 
 output "s3_backend_bucket_name" {
