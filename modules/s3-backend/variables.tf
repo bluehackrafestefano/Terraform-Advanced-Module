@@ -1,6 +1,6 @@
 variable "bucket_name" {
   type        = string
-  default     = "tf_s3_bucket_backend_task"
+  default     = "tf-s3-bucket-backend-task"
   description = "The name of the backend-s3 bucket"
 }
 
