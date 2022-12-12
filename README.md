@@ -71,14 +71,19 @@ terraform fmt
 terraform validate
 tflint
 terraform plan
-terraform apply -auto-approve
+terraform apply
+terraform workspace new dev
+terraform apply
+# update ports variable and apply again
+terraform apply
+terraform-docs markdown table . | tee README.md
 terraform destroy -auto-approve
-terrafrom graph
+terraform graph
 ```
 
 - Copy graph output.
 
-- Navigate to [GraphvizOnline](https://dreampuf.github.io/GraphvizOnline) page. Paste graph output.
+- Navigate to [GraphvizOnline](https://dreampuf.github.io/GraphvizOnline) page. Paste graph output. Select `fdp`.
 
 - cd to test folder.
 
