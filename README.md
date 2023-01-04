@@ -1,6 +1,4 @@
-# Terraform Task for Blue Billy Wig
-
-You have just been hired as the new DevOps Engineer at ACME inc. They have been working with Ansible and Cloudformaon for the last couple of years and via word of mouth, Terraform has sparked their interest but they’re not completely sure if Terraform is the way to go. You are a fan of Terraform and are trying to convince them of taking this route.
+# Terraform Modules for AWS EC2 Ubuntu Instance using S3 Backend with Terratest
 
 1. **Explain how Terraform works and how it compares to Cloudformation + Ansible (basics, pialls, pros and cons)**
 
